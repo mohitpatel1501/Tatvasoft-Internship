@@ -5,7 +5,7 @@ const Navbar = () => {
 
     const Style = {
         display: "flex",
-        gap: "20px"
+        gap: "30px"
     }
 
 
