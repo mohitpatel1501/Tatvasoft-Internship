@@ -1,4 +1,4 @@
-import BookCard from "../Components/global/Book/BookCard";
+import BookCard from "../components/global/Book/BookCard";
 import Stack from "@mui/material/Stack";
 
 const data = [
