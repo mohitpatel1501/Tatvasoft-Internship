@@ -5,32 +5,32 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const BookCard = ({ title, price, author,img }) => {
-    const Style = {
-        display: "flex",
-        gap: "15px",
-        border: "2px solid green",
-        margin: "10px",
-        padding : "20px 20px"
-    }
-    return (
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia component="img" alt="green iguana" height="140" image={img} />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {author}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Typography variant="h4">Rs. {price}</Typography>
-            <Button size="small" variant="contained" sx={{ marginLeft: "10px" }}>
-              Add to Cart
-            </Button>
-          </CardActions>
-        </Card>
-      );
-    };
-export default BookCard
+const BookCard = ({ title, price, author, img }) => {
+  const Style = {
+    display: "flex",
+    gap: "15px",
+    border: "2px solid pink",
+    margin: "10px",
+  };
+  return (
+    <Card sx={{height:"100%"}} >
+      <CardMedia   component="img" alt="green iguana" height="140" image={img} />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {author}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Typography variant="h4">Rs. {price}</Typography>
+        <Button size="small" variant="contained" sx={{ marginLeft: "10px" }}>
+          Add to Cart
+        </Button>
+      </CardActions>
+    </Card>
+  );
+};
+
+export default BookCard;
