@@ -1,5 +1,4 @@
 import BookCard from "../components/global/Book/BookCard";
-import Stack from "@mui/material/Stack";
 
 import bookService from "../services/book.service";
 import categoryService from "../services/category.service";
@@ -101,7 +100,7 @@ const BookListing = () => {
   return (
     <Container maxWidth="lg" sx={{ paddingY: "1rem" }}>
       <Typography variant="h3" sx={{ textAlign: "center" }}>
-        Books
+        Book Listing
       </Typography>
 
       <Grid
@@ -129,7 +128,7 @@ const BookListing = () => {
             }}
           />
         </Grid>
-        <Grid item md={3}>
+        <Grid item md={2}>
           <Select
             size="small"
             sx={{ width: "100%" }}
@@ -140,7 +139,7 @@ const BookListing = () => {
             <MenuItem value="z-a">Z - A</MenuItem>
           </Select>
         </Grid>
-        {/* <Grid item md={2}>
+        <Grid item md={2}>
           
           <Select
             size="small"
@@ -153,7 +152,7 @@ const BookListing = () => {
               return <MenuItem value={ele.id}>{ele.name}</MenuItem>;
             })}
           </Select>
-        </Grid> */}
+        </Grid>
       </Grid>
       <Grid
         container

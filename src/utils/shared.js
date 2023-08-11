@@ -1,7 +1,7 @@
 import { Role, RoutePaths } from "./enum";
 
 const messages = {
-  USER_DELETE: "Are you sure you want to delete this user?",
+  USER_DELETE: "Are you sure. you want to delete this user?",
   UPDATED_SUCCESS: "Record updated successfully",
   UPDATED_FAIL: "Record cannot be updated",
   DELETE_SUCCESS: "Record deleted successfully",
