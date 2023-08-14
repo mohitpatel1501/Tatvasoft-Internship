@@ -70,7 +70,7 @@ const EditBook = () => {
   } = useFormik({
     initialValues: initialValueState,
     validationSchema: bookSchema,
-
+    enableReinitialize:true,
     onSubmit: (values) => {
       bookService
         .save(values)
@@ -90,7 +90,7 @@ const EditBook = () => {
   const onSelectFile = (e, setFieldValue, setFieldError) => {
     const files = e.target.files;
     if (files?.length) {
-      
+      // console.log(files);
       const fileSelected = e.target.files[0];
       const fileNameArray = fileSelected.name.split(".");
       const extension = fileNameArray.pop();
@@ -103,7 +103,7 @@ const EditBook = () => {
         reader.readAsDataURL(fileSelected);
         reader.onload = function () {
           setFieldValue("base64image", reader.result);
-        
+          // console.log(reader.result);
         };
         reader.onerror = function (error) {
           throw error;
