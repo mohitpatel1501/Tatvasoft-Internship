@@ -99,9 +99,14 @@ const BookListing = () => {
 
   return (
     <Container maxWidth="lg" sx={{ paddingY: "1rem" }}>
-      <Typography variant="h3" sx={{ textAlign: "center" }}>
-        Book Listing
-      </Typography>
+      <Typography
+          variant="h4"
+          gutterBottom
+          style={{ fontWeight: 600 }}
+          textAlign="center"
+        >
+          Book Listing
+        </Typography>
 
       <Grid
         container
@@ -140,7 +145,7 @@ const BookListing = () => {
           </Select>
         </Grid>
         <Grid item md={2}>
-          
+          {/*  !!!!!!!!!  Ye vala Select optional hai kripya copy na kare */}
           <Select
             size="small"
             sx={{ width: "100%" }}
@@ -163,7 +168,7 @@ const BookListing = () => {
       >
         {books.map((ele) => {
           return (
-            <Grid item sm={12} md={6} key={ele.name}>
+            <Grid item sm={12} md={6} key={ele.id}>
               <BookCard
                 name={ele.name}
                 price={ele.price}
