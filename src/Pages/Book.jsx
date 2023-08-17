@@ -114,7 +114,7 @@ const Book = () => {
           ADD BOOK
         </Button>
       </Box>
-      {/* <ConfirmationDialog/> */}
+    
       <TableContainer>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -137,7 +137,7 @@ const Book = () => {
                 <TableCell component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell align="center">{row.price}</TableCell>
+                <TableCell align="center">&#8377; {row.price}</TableCell>
                 <TableCell align="center">
                   {" "}
                   {categories.find((c) => c.id === row.categoryId)?.name}
@@ -200,7 +200,7 @@ const Book = () => {
         onClose={() => setOpen(false)}
         onConfirm={() => onConfirmDelete()}
         title="Delete book"
-        description="Are you sure to delete?"
+        description="Are you sure,you want to delete this?"
       />
     </Container>
   );

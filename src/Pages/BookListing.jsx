@@ -145,7 +145,7 @@ const BookListing = () => {
           </Select>
         </Grid>
         <Grid item md={2}>
-          {/*  !!!!!!!!!  Ye vala Select optional hai kripya copy na kare */}
+          
           <Select
             size="small"
             sx={{ width: "100%" }}
@@ -168,13 +168,9 @@ const BookListing = () => {
       >
         {books.map((ele) => {
           return (
-            <Grid item sm={12} md={6} key={ele.id}>
+            <Grid item sm={12} md={6} key={`card-${ele.id}`}>
               <BookCard
-                name={ele.name}
-                price={ele.price}
-                category={ele.category}
-                description={ele.description}
-                img={ele.base64image}
+                book={ele}
               />
             </Grid>
           );
